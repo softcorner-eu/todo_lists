@@ -1,0 +1,244 @@
+Started GET "/" for ::1 at 2023-07-25 14:29:23 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-5.2.8.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/railties-5.2.8.1/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 13ms (Views: 8.5ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateTodoList (20230725124733)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "todo_lists" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar)[0m
+  ↳ db/migrate/20230725124733_create_todo_list.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "todo_items" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "todo_list_id" integer)[0m
+  ↳ db/migrate/20230725124733_create_todo_list.rb:7
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_todo_items_on_todo_list_id" ON "todo_items" ("todo_list_id")[0m
+  ↳ db/migrate/20230725124733_create_todo_list.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230725124733"]]
+  ↳ bin/rails:9
+  [1m[35m (5.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-07-25 12:59:12.813588"], ["updated_at", "2023-07-25 12:59:12.813588"]]
+  ↳ bin/rails:9
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" ORDER BY "todo_lists"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/todo_lists/" for ::1 at 2023-07-25 15:13:11 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  Rendered todo_lists/index.html.slim within layouts/application (15.2ms)
+Completed 200 OK in 899ms (Views: 898.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2023-07-25 15:14:13 +0200
+  
+ArgumentError (Invalid route name: 'new_/'):
+  
+config/routes.rb:3:in `block (2 levels) in <main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:21:54 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:26:56 +0200
+Processing by TodoListsController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `build' for TodoList(id: integer, name: string):Class):
+  
+app/controllers/todo_lists_controller.rb:7:in `new'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:27:22 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (1.6ms)
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:29:01 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (108.4ms)
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<SimpleForm::FormBuilder:0x00007f5f34b36650>):
+    1: - simple_form_for @todo_list do |f|
+    2:   - f.name
+  
+app/views/todo_lists/new.html.slim:2:in `block in _app_views_todo_lists_new_html_slim__4458519784079357526_23480'
+app/views/todo_lists/new.html.slim:1:in `_app_views_todo_lists_new_html_slim__4458519784079357526_23480'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodoList Create (0.9ms)[0m  [1m[32mINSERT INTO "todo_lists" ("name") VALUES (?)[0m  [["name", "feur"]]
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" ORDER BY "todo_lists"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:30:49 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (64.6ms)
+Completed 500 Internal Server Error in 69ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<SimpleForm::FormBuilder:0x00007f5f205a52b8>):
+    1: - simple_form_for @todo_list do |f|
+    2:   - f.name
+  
+app/views/todo_lists/new.html.slim:2:in `block in _app_views_todo_lists_new_html_slim__4458519784079357526_24120'
+app/views/todo_lists/new.html.slim:1:in `_app_views_todo_lists_new_html_slim__4458519784079357526_24120'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:31:07 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (37.5ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:34:45 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (91.6ms)
+Completed 500 Internal Server Error in 96ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `todo_lists_path_path' for #<#<Class:0x00007f5f34a831e0>:0x00007f5f309bb630>
+Did you mean?  todo_lists_path):
+    1: = simple_form_for @todo_list, url: :todo_lists_path do |f|
+    2:   = f.input :name
+    3:   = f.submit
+  
+app/views/todo_lists/new.html.slim:1:in `_app_views_todo_lists_new_html_slim__4458519784079357526_24760'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:35:12 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (6.0ms)
+Completed 200 OK in 24ms (Views: 21.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:37:36 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (3.9ms)
+Completed 200 OK in 17ms (Views: 13.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:38:04 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mSFzGoPt6u9uOHAbTW2votbWEhhgFS58ptSwLLnOWNgt23uCIJ7xtvaqWMV6zUy99TTYjUyl+XCbHJCujWI1Q==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f5f3460d9d0>
+Did you mean?  try):
+  
+app/controllers/todo_lists_controller.rb:11:in `create'
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:38:52 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7mSFzGoPt6u9uOHAbTW2votbWEhhgFS58ptSwLLnOWNgt23uCIJ7xtvaqWMV6zUy99TTYjUyl+XCbHJCujWI1Q==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f5f34ad4a18>
+Did you mean?  try):
+  
+app/controllers/todo_lists_controller.rb:11:in `create'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:38:56 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (3.6ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:38:58 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwU8Phq2r3xNzr+zBsadC1Ilnzir8Pl7uAqJSMwY2b1B1tQceDtjESus9xB+GB6HLqoUEv9COieI/anKxMpoCw==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `pry' for #<Binding:0x00007f5f4409e368>
+Did you mean?  try):
+  
+app/controllers/todo_lists_controller.rb:11:in `create'
+  [1m[36mTodoList Load (1.3ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:41:14 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwU8Phq2r3xNzr+zBsadC1Ilnzir8Pl7uAqJSMwY2b1B1tQceDtjESus9xB+GB6HLqoUEv9COieI/anKxMpoCw==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+No template found for TodoListsController#create, rendering head :no_content
+Completed 204 No Content in 54904ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:42:15 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwU8Phq2r3xNzr+zBsadC1Ilnzir8Pl7uAqJSMwY2b1B1tQceDtjESus9xB+GB6HLqoUEv9COieI/anKxMpoCw==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:47:53 +0200
+No template found for TodoListsController#create, rendering head :no_content
+Completed 204 No Content in 387452ms (ActiveRecord: 0.0ms)
+
+
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zwU8Phq2r3xNzr+zBsadC1Ilnzir8Pl7uAqJSMwY2b1B1tQceDtjESus9xB+GB6HLqoUEv9COieI/anKxMpoCw==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `save' for #<TodoListsController:0x00007feee4140ea8>):
+  
+app/controllers/todo_lists_controller.rb:11:in `create'
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:48:51 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (20.3ms)
+Completed 200 OK in 150ms (Views: 143.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-07-25 15:48:53 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:48:59 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C8IeR8RbiBFzSd8+A5M8QyuStdRAnpUfQtOKFEVg5DaFEfZlptZEfBUrl517Tb/PVx0+/hQsVkNyJKqWTbJVgA==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
+Completed 500 Internal Server Error in 134ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `save' for #<TodoListsController:0x00007f4cb4c8c0f0>):
+  
+app/controllers/todo_lists_controller.rb:11:in `create'
+Started POST "/todo_lists" for ::1 at 2023-07-25 15:49:37 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C8IeR8RbiBFzSd8+A5M8QyuStdRAnpUfQtOKFEVg5DaFEfZlptZEfBUrl517Tb/PVx0+/hQsVkNyJKqWTbJVgA==", "todo_list"=>{"name"=>"todo_list_numero_1_from_squid_game"}, "commit"=>"Create Todo list"}
