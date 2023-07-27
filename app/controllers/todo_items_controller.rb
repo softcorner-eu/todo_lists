@@ -1,11 +1,18 @@
 class TodoItemsController < ApplicationController
+
+  def new
+    @todo_item = TodoItem.new
+    @todo_list_id = params[:todo_list_id]
+  end
+
   def create
-    binding.pry
+    @todo_list_id = params[:todo_list_id]
     @todo_item = TodoItem.new todo_item_params
+    @todo_item.assign_attributes(todo_list_id: @todo_list_id)
     if @todo_item.save
-      binding.pry
+      redirect_to todo_list_path(@todo_list_id)
     else
-      render 'todo_lists/show'
+      render 'new'
     end
   end
 

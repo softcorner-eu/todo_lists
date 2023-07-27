@@ -1,0 +1,8 @@
+.row
+  = form_for @todo_item, url: todo_list_todo_items_path(todo_list_id: @todo_list_id) do |f|
+    .form-group
+      = f.label :content
+      = f.text_field :content, class: 'form-control'
+      - if @todo_item.errors.key? :content
+        p = @todo_item.errors.full_messages_for(:content).to_sentence
+    = f.submit class: 'btn btn-primary'
