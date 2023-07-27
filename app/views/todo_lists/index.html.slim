@@ -1,1 +1,16 @@
-h1 = "Hello"
+.container
+  .row
+    .col-lg-6
+      h1 Index
+    .col-lg-2.offset-lg-4
+      = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'btn btn-primary'
+  .row
+    .col-lg-12
+      #todo_list_wrapper
+        - @todo_lists.each do |todo_list|
+          .todo_list_card.card
+            h3.todo_list_card_title.card-title = todo_list.name
+            .card-body.todo_list_card_body
+              p.card-text = todo_list.description
+            .todo_list_card_bottom
+              = link_to "Voir", todo_list_path(todo_list.id), class: 'btn btn-primary'

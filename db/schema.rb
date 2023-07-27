@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_07_25_124733) do
+ActiveRecord::Schema.define(version: 2023_07_26_225711) do
 
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 2023_07_25_124733) do
 
   create_table "todo_lists", force: :cascade do |t|
     t.string "name"
+    t.string "description"
   end
 
 end

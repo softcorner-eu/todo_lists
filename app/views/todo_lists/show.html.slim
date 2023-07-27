@@ -1,0 +1,17 @@
+.container
+  .row
+    h1.col-lg-6 = @todo_list.name
+    = link_to "Toutes les listes", todo_lists_path, class: 'col-lg-2 offset-lg-2 btn btn-primary'
+    = link_to "Modifier la liste", edit_todo_list_path, class: 'col-lg-2 btn btn-secondary'
+  .row
+    p = @todo_list.description
+  .row
+    ul
+    - @todo_list.todo_items.each do |item|
+      li = item.content
+  .row
+    = form_for @todo_item do |f|
+      .form-group
+        = f.label :content
+        = f.text_field :content, class: 'form-control'
+      = f.submit class: 'btn btn-primary'

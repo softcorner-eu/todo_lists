@@ -1,0 +1,31 @@
+#todo_list_wrapper {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 2rem;
+
+  .todo_list_card {
+    width: 90%;
+    height: 200px;
+    border: 1px solid $black;
+    padding: 1rem;
+    border-radius: 30px;
+    margin: 2rem;
+  }
+
+  .todo_list_card_body {
+    padding: 0;
+  }
+
+  .todo_list_card_title {
+    border-bottom: 1px solid $black;
+    padding-bottom: 5px;
+  }
+
+  .todo_list_card_bottom {
+    text-align: end;
+  }
+}
+
+
+
