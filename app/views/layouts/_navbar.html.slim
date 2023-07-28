@@ -1,3 +1,9 @@
-.navbar.navbar-expand-lg.navbar-light.bg-light
-  = link_to "Todolist", todo_lists_path, class: 'navbar-brand'
-  = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'navbar-brand'
+.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  = link_to "Todolist", root_path, class: 'navbar-brand'
+  a.navbar-brand
+    button.navbar-toggler
+      span.navbar-toggler-icon
+  .navbar-collapse
+    ul.navbar-nav
+      li.nav-item
+        = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'nav-link'

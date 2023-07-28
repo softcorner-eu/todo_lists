@@ -13,33 +13,27 @@ class TodoListsController < ApplicationController
 
   def new
     @todo_list = TodoList.new
+    @todo_list.todo_items.build
   end
 
   def create
     binding.pry
-    @todo_list = TodoList.new todo_list_params
-    if @todo_list.save
-      respond_with @todo_list
-    else
-      render :new
-    end
+    @todo_list = TodoList.create todo_list_params
+    respond_with @todo_list
   end
 
   def edit ; end
 
   def update
-    @todo_list.assign_attributes todo_list_params
-    if @todo_list.save
-      respond_with @todo_list
-    else
-      render :edit
-    end
+    @todo_list.update todo_list_params
+    respond_with @todo_list
   end
 
   private
 
   def todo_list_params
-    params.fetch(:todo_list)
-          .permit(:name, :description, todo_items_attributes: [:content])
+    params.require(:todo_list)
+          .permit(:name, :description, todo_items_attributes: [:content]
+          )
   end
 end

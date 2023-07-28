@@ -11,7 +11,7 @@
       - if @todo_list.errors.key? :description
         p = @todo_list.errors.full_messages_for(:description).to_sentence
     .form-group
-      = fields_for :todo_items do |ff|
+      = f.fields_for :todo_items do |ff|
         = ff.label :content
         = ff.text_field :content,  class: 'form-control'
     = f.submit class: 'btn btn-primary'
