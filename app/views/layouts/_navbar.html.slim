@@ -1,9 +1,9 @@
-.navbar.navbar-expand-lg.navbar-dark.bg-dark
+#top-nabar.navbar.navbar-expand-lg.navbar-dark.bg-dark
   = link_to "Todolist", root_path, class: 'navbar-brand'
   a.navbar-brand
-    button.navbar-toggler
+    button.navbar-toggler data-toggle="collapse" data-target="#navbar-content"
       span.navbar-toggler-icon
-  .navbar-collapse
+  #navbar-content.navbar-collapse.collapse
     ul.navbar-nav
       li.nav-item
         = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'nav-link'
