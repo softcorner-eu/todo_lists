@@ -1,11 +1,7 @@
 #todo_list_wrapper {
-  width: 80%;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
   margin-top: 2rem;
 
   .todo_list_card {
-    width: 90%;
     height: 200px;
     border: 1px solid $black;
     padding: 1rem;
