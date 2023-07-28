@@ -16,9 +16,10 @@ class TodoListsController < ApplicationController
   end
 
   def create
+    binding.pry
     @todo_list = TodoList.new todo_list_params
     if @todo_list.save
-      redirect_to todo_list_path(@todo_list)
+      respond_with @todo_list
     else
       render :new
     end
@@ -29,7 +30,7 @@ class TodoListsController < ApplicationController
   def update
     @todo_list.assign_attributes todo_list_params
     if @todo_list.save
-      redirect_to todo_list_path(@todo_list)
+      respond_with @todo_list
     else
       render :edit
     end
@@ -38,7 +39,7 @@ class TodoListsController < ApplicationController
   private
 
   def todo_list_params
-    params.require(:todo_list)
-          .permit(:name, :description)
+    params.fetch(:todo_list)
+          .permit(:name, :description, todo_items_attributes: [:content])
   end
 end

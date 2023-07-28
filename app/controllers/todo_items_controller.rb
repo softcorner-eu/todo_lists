@@ -12,7 +12,7 @@ class TodoItemsController < ApplicationController
   def create
     @todo_item = @todo_list.todo_items.build todo_item_params
     if @todo_item.save
-      redirect_to todo_list_path(@todo_list)
+      respond_with @todo_list
     else
       render 'new'
     end
