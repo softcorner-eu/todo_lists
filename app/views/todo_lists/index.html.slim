@@ -1,13 +1,7 @@
 .row
   .col-lg-12
     #todo_list_wrapper
-      - @todo_lists.in_groups_of(3).each do |todo_list_card_deck|
-        .row
-          - todo_list_card_deck.compact.each do |todo_list_card|
-            .col-lg-4
-              .todo_list_card.card
-                h3.todo_list_card_title.card-title = todo_list_card.name
-                .card-body.todo_list_card_body
-                  p.card-text = todo_list_card.description
-                .todo_list_card_bottom
-                  = link_to "Voir", todo_list_path(todo_list_card.id), class: 'btn btn-primary'
+      .row
+        - @todo_lists.each do |todo_list_card|
+          .col-lg-3.col-md-4.col-sm-6
+            = render partial: 'card', locals: {todo_list_card: todo_list_card}
