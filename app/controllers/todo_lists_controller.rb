@@ -2,7 +2,6 @@ class TodoListsController < ApplicationController
 
   before_action only: [:update, :edit, :show] do
     @todo_list = TodoList.find(params[:id])
-
   end
 
   def index

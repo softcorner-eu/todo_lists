@@ -1,18 +1,18 @@
-.container
-  .row
-    h1.col-lg-6 = @todo_list.name
-    = link_to "Modifier la liste", edit_todo_list_path, class: 'col-lg-2 btn btn-secondary'
-  .row
+.row
+  .col-lg-6
+    h1 = @todo_list.name
+  .col-lg-2.offset-lg-4
+    = link_to "Modifier la liste", edit_todo_list_path, class: 'btn btn-secondary'
+.row
+  .col-sm
     p = @todo_list.description
-  .card
-    .card-body
-      ul
-        - @todo_list.todo_items.each do |item|
-          - if item.content
-            li.list-group-item.input-group.mb-3 = item.content
-      = form_for [@todo_list, @todo_item], :html => {:class => 'form-inline'} do |f|
-        .form-group.mb-2
-          = f.text_field :content, class: 'form-control'
-          - if @todo_item.errors.key? :content
-            p = @todo_item.errors.full_messages_for(:content).to_sentence
-        = f.submit class: 'btn btn-primary  mb-2'
+    ul.list-group
+      - @todo_list.todo_items.each do |item|
+        - if item.content
+          li.list-group-item = item.content
+    = form_for [@todo_list, @todo_item], :html => {:class => 'form-inline input-group mb-3'} do |f|
+      = f.text_field :content, class: 'form-control', 'aria-label': "Recipient's username", 'aria-describedby': "btn-1"
+      - if @todo_item.errors.key? :content
+        .alert.alert-danger
+          p = @todo_item.errors.full_messages_for(:content).to_sentence
+      = f.submit class: 'btn btn-primary', id: 'btn-1'

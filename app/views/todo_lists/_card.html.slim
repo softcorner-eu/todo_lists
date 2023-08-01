@@ -1,7 +1,6 @@
-.todo_list_card.card
-  .card-title
-    h3.todo_list_card_title = todo_list_card.name
-  .card-body.todo_list_card_body
+.card.todo_list_card
+  h3.card-header.text-center = todo_list_card.name
+  .card-body
     p.card-text = todo_list_card.description
-  .todo_list_card_bottom
+  .text-right.mr-2.mb-2
     = link_to "Voir", todo_list_path(todo_list_card.id), class: 'btn btn-primary'

@@ -30,4 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  helpers:
+    label:
+      todo_list:
+        name: "Todolist's name"
+        description: "Description"
+      todo_items:
+        content: "Item content"
+  flash:
+    todo_lists:
+      create:
+        notice: "%{resource_name} was successfully created"

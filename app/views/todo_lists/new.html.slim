@@ -4,12 +4,14 @@
       = f.label :name
       = f.text_field :name, class: 'form-control'
       - if @todo_list.errors.key? :name
-        p = @todo_list.errors.full_messages_for(:name).to_sentence
+        .alert.alert-danger
+          p = @todo_list.errors.full_messages_for(:name).to_sentence
     .form-group
       = f.label :description
       = f.text_field :description,  class: 'form-control'
       - if @todo_list.errors.key? :description
-        p = @todo_list.errors.full_messages_for(:description).to_sentence
+        .alert.alert-danger
+          p = @todo_list.errors.full_messages_for(:description).to_sentence
     .form-group
       = f.fields_for :todo_items do |ff|
         = ff.label :content
