@@ -9,7 +9,9 @@ class TodoListsController < ApplicationController
     @todo_lists = TodoList.all
   end
 
-  def show ; end
+  def show
+    @todo_item = @todo_list.todo_items.build
+  end
 
   def new
     @todo_list = TodoList.new
@@ -17,7 +19,6 @@ class TodoListsController < ApplicationController
   end
 
   def create
-    binding.pry
     @todo_list = TodoList.create todo_list_params
     respond_with @todo_list
   end

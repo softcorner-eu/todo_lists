@@ -4,9 +4,15 @@
     = link_to "Modifier la liste", edit_todo_list_path, class: 'col-lg-2 btn btn-secondary'
   .row
     p = @todo_list.description
-  .row
-    ul
-      - @todo_list.todo_items.each do |item|
-        li = item.content
-  .row
-    = link_to "Créer des items", new_todo_list_todo_item_path(todo_list_id: @todo_list.id), class: 'btn btn-primary'
+  .card
+    .card-body
+      ul
+        - @todo_list.todo_items.each do |item|
+          - if item.content
+            li.list-group-item.input-group.mb-3 = item.content
+      = form_for [@todo_list, @todo_item], :html => {:class => 'form-inline'} do |f|
+        .form-group.mb-2
+          = f.text_field :content, class: 'form-control'
+          - if @todo_item.errors.key? :content
+            p = @todo_item.errors.full_messages_for(:content).to_sentence
+        = f.submit class: 'btn btn-primary  mb-2'

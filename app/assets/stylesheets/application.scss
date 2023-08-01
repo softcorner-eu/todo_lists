@@ -13,31 +13,31 @@
  */
 
 @import "bootstrap";
-@import "./*";
 
 #top-nabar {
   margin-bottom: 3rem;
 }
 
-.todo_list_card {
-  min-height: 200px;
+ul {
+  list-style-type: none;
 }
 
-//.todo_list_card {
-//  height: 200px;
-//  border: 1px solid $black;
-//  padding: 1rem;
-//  border-radius: 30px;
-//  margin-bottom: 2rem;
-//  .card-title{
-//    border-bottom: 1px solid $black;
-//    padding-bottom: 5px;
-//  }
-//  .card-body{
-//    padding: 0;
-//  }
-//  .todo_list_card_bottom {
-//    text-align: end;
-//  }
-//}
-//
+
+.todo_list_card {
+ height: 250px;
+ border: 1px solid $black;
+ padding: 1rem;
+ border-radius: 30px;
+ margin-bottom: 2rem;
+ .card-title{
+   border-bottom: 1px solid $black;
+   padding-bottom: 5px;
+ }
+ .card-body{
+   padding: 0;
+ }
+ .todo_list_card_bottom {
+   text-align: end;
+ }
+}
+

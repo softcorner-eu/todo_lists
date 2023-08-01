@@ -7452,3 +7452,1101 @@ Processing by TodoListsController#show as HTML
 Completed 200 OK in 78ms (Views: 73.6ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/todo_lists/24" for ::1 at 2023-07-28 17:10:51 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.4ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 130ms (Views: 128.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 09:42:01 +0200
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (5.7ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/_card.html.slim (0.4ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.3ms)
+  Rendered todo_lists/index.html.slim within layouts/application (53.3ms)
+  Rendered layouts/_navbar.html.slim (12.0ms)
+Completed 200 OK in 485ms (Views: 468.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 09:43:12 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.8ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (7.8ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (34.4ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 1105ms (Views: 1101.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 09:45:30 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (33.9ms)
+  Rendered layouts/_navbar.html.slim (9.3ms)
+Completed 200 OK in 117ms (Views: 105.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 09:47:13 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (3.3ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (14.2ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 870ms (Views: 868.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 09:50:16 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (2.8ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (15.6ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 786ms (Views: 784.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:01:52 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (2.8ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (12.6ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 49ms (Views: 47.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:05:55 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (2.8ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (13.2ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 752ms (Views: 751.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:06:06 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (2.6ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (11.3ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+Completed 200 OK in 702ms (Views: 700.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:09:44 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 39ms (Views: 36.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:11:23 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (4.5ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:18:46 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (16.0ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 61ms (Views: 48.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:19:52 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:20:33 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (12.9ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:20:34 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (10.8ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 54ms (Views: 48.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:20:42 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (9.9ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 62ms (Views: 44.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_lists/7" for ::1 at 2023-08-01 10:25:15 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 7]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (14.8ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 776ms (Views: 770.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:25:37 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (3.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.2ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (15.1ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/8" for ::1 at 2023-08-01 10:25:40 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 8]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/17" for ::1 at 2023-08-01 10:25:46 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 17], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 17]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 43ms (Views: 41.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/21" for ::1 at 2023-08-01 10:25:50 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 21]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6.4ms)
+  Rendered layouts/_navbar.html.slim (4.2ms)
+Completed 200 OK in 46ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/20" for ::1 at 2023-08-01 10:25:53 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 20], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 20]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (11.4ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 65ms (Views: 61.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/19" for ::1 at 2023-08-01 10:25:57 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 19], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 19]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (8.5ms)
+  Rendered layouts/_navbar.html.slim (4.9ms)
+Completed 200 OK in 55ms (Views: 53.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/21" for ::1 at 2023-08-01 10:26:01 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"21"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 21], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 21]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (10.7ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 56ms (Views: 53.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/22" for ::1 at 2023-08-01 10:26:04 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"22"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 22], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 22]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6.6ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 41ms (Views: 38.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:06 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6.9ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 40ms (Views: 37.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:31 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:33 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 44ms (Views: 41.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:34 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (8.0ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 42ms (Views: 38.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:34 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 37ms (Views: 35.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:34 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 35ms (Views: 32.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:26:34 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.3ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 38ms (Views: 36.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:29:12 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (16.6ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 61ms (Views: 55.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:29:33 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 36ms (Views: 33.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:31:09 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  Rendered todo_lists/show.html.slim within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms)
+
+
+  
+SyntaxError (/home/matheo/Documents/pro/todo_lists/app/views/todo_lists/show.html.slim:17: syntax error, unexpected ':', expecting ')'
+...ape_html_safe((f.submit clas>s: 'btn btn-primary  mb-2'))).t...
+...                              ^
+):
+  
+app/views/todo_lists/show.html.slim:17: syntax error, unexpected ':', expecting ')'
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:31:21 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (9.8ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+Completed 200 OK in 48ms (Views: 45.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:33:20 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (22789.9ms)
+Completed 500 Internal Server Error in 22799ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `-' for #<Binding:0x00007f5e31202da8>):
+     7:   .row
+     8:     ul.list-group
+     9:       - @todo_list.todo_items.each do |item|
+    10:         - binding-pry
+    11:         li.list-group-item = item.content
+    12:   .row
+    13:     = form_for [@todo_list, @todo_item], :html => {:class => 'form-inline'} do |f|
+  
+app/views/todo_lists/show.html.slim:10:in `block in _app_views_todo_lists_show_html_slim___559622687906264354_22820'
+app/views/todo_lists/show.html.slim:9:in `_app_views_todo_lists_show_html_slim___559622687906264354_22820'
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:34:43 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:37:07 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6520.5ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+Completed 200 OK in 6575ms (Views: 6573.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/24" for ::1 at 2023-08-01 10:37:23 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mTodoList Load (0.4ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 24]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (12.6ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 62ms (Views: 54.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-08-01 10:37:26 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (7.6ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 39ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-08-01 10:37:36 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Qas8lwmCUXnSphR/DXP0gguwNBaNs+nw3z59R9xhmn/6vMVNhJmcCcsvtCoGU4DQbigiwBTKeMgwMdwhfWYTCA==", "todo_list"=>{"name"=>"Test", "description"=>"test", "todo_items_attributes"=>{"0"=>{"content"=>""}}}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[36mTodoList Create (0.4ms)[0m  [1m[32mINSERT INTO "todo_lists" ("name", "description") VALUES (?, ?)[0m  [["name", "Test"], ["description", "test"]]
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[35m (6.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/25
+Completed 302 Found in 7990ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/todo_lists/25" for ::1 at 2023-08-01 10:37:44 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"25"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 25], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 25]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.slim (3.6ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:37:56 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (3.0ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (14.2ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/new" for ::1 at 2023-08-01 10:37:58 +0200
+Processing by TodoListsController#new as HTML
+  Rendering todo_lists/new.html.slim within layouts/application
+  Rendered todo_lists/new.html.slim within layouts/application (6.7ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todo_lists" for ::1 at 2023-08-01 10:38:15 +0200
+Processing by TodoListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c7y7pW5AJ6NWkY21igoXCH2BccLtr2AgmVI2Gvn6NhvIq0J/41vq008YLeCBKmNaGBlnFHTW8Rh2XZd8WP2/bA==", "todo_list"=>{"name"=>"Nouvelle liste", "description"=>"Liste tah le test", "todo_items_attributes"=>{"0"=>{"content"=>"Premier content"}}}, "commit"=>"Create Todo list"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[36mTodoList Create (1.0ms)[0m  [1m[32mINSERT INTO "todo_lists" ("name", "description") VALUES (?, ?)[0m  [["name", "Nouvelle liste"], ["description", "Liste tah le test"]]
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[36mTodoItem Create (1.9ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id") VALUES (?, ?)[0m  [["content", "Premier content"], ["todo_list_id", 26]]
+  ↳ app/controllers/todo_lists_controller.rb:23
+  [1m[35m (5.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_lists_controller.rb:23
+Redirected to http://localhost:3000/todo_lists/26
+Completed 302 Found in 3809ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:38:19 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (11.9ms)
+  Rendered layouts/_navbar.html.slim (3.1ms)
+Completed 200 OK in 63ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/todo_lists/26/todo_items" for ::1 at 2023-08-01 10:38:49 +0200
+  Rendered todo_lists/show.html.slim within layouts/application (371615.1ms)
+  Rendered layouts/_navbar.html.slim (3.4ms)
+Completed 200 OK in 371683ms (Views: 371680.2ms | ActiveRecord: 0.3ms)
+
+
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Fr1lMZZXbaaEYF9afm7o/qd6TSj1I+8kCZuRBi1A2FEkii3pgXlfVuF+AmEFLoBSL1sYxJmbfDpos4axsHJSzQ==", "todo_item"=>{"content"=>"test"}, "commit"=>"Create Todo item", "todo_list_id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[36mTodoItem Create (0.2ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id") VALUES (?, ?)[0m  [["content", "test"], ["todo_list_id", 26]]
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+Redirected to http://localhost:3000/todo_lists/26
+Completed 302 Found in 21ms (ActiveRecord: 5.5ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:41:02 +0200
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/matheo/.rbenv/versions/2.7.2/lib/ruby/gems/2.7.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (20.1ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 318ms (Views: 302.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2023-08-01 10:41:06 +0200
+Processing by TodoListsController#index as HTML
+  Rendering todo_lists/index.html.slim within layouts/application
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT "todo_lists".* FROM "todo_lists"[0m
+  ↳ app/views/todo_lists/index.html.slim:5
+  Rendered todo_lists/_card.html.slim (3.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/_card.html.slim (0.1ms)
+  Rendered todo_lists/index.html.slim within layouts/application (13.9ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:41:08 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (7.7ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/todo_lists/26/todo_items" for ::1 at 2023-08-01 10:41:13 +0200
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XkJJ4gLNrp/KKXC9+B0E76yrf22UKd2XC580EF+37dMBtnqkh7XqwzQtc+UE+hwYkRbTb/oh0wJFe/Kq0574zQ==", "todo_item"=>{"content"=>"dernier test"}, "commit"=>"Create Todo item", "todo_list_id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id") VALUES (?, ?)[0m  [["content", "dernier test"], ["todo_list_id", 26]]
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+Redirected to http://localhost:3000/todo_lists/26
+Completed 302 Found in 9ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:41:13 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (13.6ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? LIMIT ?[0m  [["todo_list_id", 26], ["LIMIT", 11]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? LIMIT ?[0m  [["todo_list_id", 26], ["LIMIT", 1]]
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? LIMIT ?[0m  [["todo_list_id", 26], ["LIMIT", 1]]
+  [1m[36mTodoItem Load (0.4ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" ORDER BY "todo_items"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mTodoItem Load (0.3ms)[0m  [1m[34mSELECT  "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ? LIMIT ?[0m  [["todo_list_id", 26], ["LIMIT", 11]]
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:44:12 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.3ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (13.0ms)
+  Rendered layouts/_navbar.html.slim (4.4ms)
+Completed 200 OK in 66ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/todo_lists/26/todo_items" for ::1 at 2023-08-01 10:44:57 +0200
+Processing by TodoItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Au2THB1u3kOyRCJGtIfamhh95U0FtwUFK5hXUuxqbT8w2tvECkDss9daf33Px7I2kFywoWkPlhtKsEDlcVjnow==", "todo_item"=>{"content"=>"item "}, "commit"=>"Create Todo item", "todo_list_id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_items_controller.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[36mTodoItem Create (0.3ms)[0m  [1m[32mINSERT INTO "todo_items" ("content", "todo_list_id") VALUES (?, ?)[0m  [["content", "item "], ["todo_list_id", 26]]
+  ↳ app/controllers/todo_items_controller.rb:12
+  [1m[35m (3.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todo_items_controller.rb:12
+Redirected to http://localhost:3000/todo_lists/26
+Completed 302 Found in 9ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:44:57 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:46:52 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (6.5ms)
+  Rendered layouts/_navbar.html.slim (4.3ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:47:18 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:47:32 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (5.1ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:50:31 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:9
+  Rendered todo_lists/show.html.slim within layouts/application (7.5ms)
+  Rendered layouts/_navbar.html.slim (2.8ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 10:59:23 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 56ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:06:48 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (5.7ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 43ms (Views: 40.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:07:59 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (6.1ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:08:30 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (5.3ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:15:14 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.2ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (6.3ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 60ms (Views: 57.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:15:15 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (6.1ms)
+  Rendered layouts/_navbar.html.slim (2.9ms)
+Completed 200 OK in 40ms (Views: 38.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:15:15 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (4.8ms)
+  Rendered layouts/_navbar.html.slim (2.6ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:23:08 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.2ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (6.8ms)
+  Rendered layouts/_navbar.html.slim (3.3ms)
+Completed 200 OK in 42ms (Views: 39.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:25:12 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (5.9ms)
+  Rendered layouts/_navbar.html.slim (3.0ms)
+Completed 200 OK in 46ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:25:45 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (5.0ms)
+  Rendered layouts/_navbar.html.slim (2.7ms)
+Completed 200 OK in 37ms (Views: 35.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todo_lists/26" for ::1 at 2023-08-01 11:28:21 +0200
+Processing by TodoListsController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mTodoList Load (0.1ms)[0m  [1m[34mSELECT  "todo_lists".* FROM "todo_lists" WHERE "todo_lists"."id" = ? LIMIT ?[0m  [["id", 26], ["LIMIT", 1]]
+  ↳ app/controllers/todo_lists_controller.rb:4
+  Rendering todo_lists/show.html.slim within layouts/application
+  [1m[36mTodoItem Load (0.1ms)[0m  [1m[34mSELECT "todo_items".* FROM "todo_items" WHERE "todo_items"."todo_list_id" = ?[0m  [["todo_list_id", 26]]
+  ↳ app/views/todo_lists/show.html.slim:10
+  Rendered todo_lists/show.html.slim within layouts/application (6.7ms)
+  Rendered layouts/_navbar.html.slim (3.2ms)
+Completed 200 OK in 47ms (Views: 44.7ms | ActiveRecord: 0.2ms)
+
+
