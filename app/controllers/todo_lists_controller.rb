@@ -15,6 +15,8 @@ class TodoListsController < ApplicationController
   def new
     @todo_list = TodoList.new
     @todo_list.todo_items.build
+    @create_form = true
+    render 'form'
   end
 
   def create
@@ -23,7 +25,9 @@ class TodoListsController < ApplicationController
     respond_with @todo_list
   end
 
-  def edit ; end
+  def edit
+    render 'form'
+  end
 
   def update
     @todo_list.update todo_list_params
