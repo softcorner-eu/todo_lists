@@ -30,6 +30,10 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    attributes:
+      todo_list:
+        name: Title
   helpers:
     label:
       todo_list:

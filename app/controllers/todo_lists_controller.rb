@@ -19,6 +19,7 @@ class TodoListsController < ApplicationController
 
   def create
     @todo_list = TodoList.create todo_list_params
+    @todo_item = @todo_list.todo_items.build
     respond_with @todo_list
   end
 
