@@ -33,8 +33,19 @@ en:
   activerecord:
     attributes:
       todo_list:
-        name: Title
+        name: Name
   helpers:
+    todo_list:
+      select_attr:
+        values:
+          primary: Blue
+          secondary: Grey
+          success: Green
+          danger: Red
+          warning: Yellow
+          info: Cyan
+          light: White
+          dark: Black
     label:
       todo_list:
         name: "Todolist's name"

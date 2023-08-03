@@ -15,19 +15,16 @@ class TodoListsController < ApplicationController
   def new
     @todo_list = TodoList.new
     @todo_list.todo_items.build
-    @create_form = true
-    render 'form'
   end
 
   def create
+    binding.pry
     @todo_list = TodoList.create todo_list_params
     @todo_item = @todo_list.todo_items.build
     respond_with @todo_list
   end
 
-  def edit
-    render 'form'
-  end
+  def edit ; end
 
   def update
     @todo_list.update todo_list_params
@@ -38,7 +35,7 @@ class TodoListsController < ApplicationController
 
   def todo_list_params
     params.require(:todo_list)
-          .permit(:name, :description, todo_items_attributes: [:content]
+          .permit(:name, :description, :color_theme,  todo_items_attributes: [:id, :content]
           )
   end
 end
