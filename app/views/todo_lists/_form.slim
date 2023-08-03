@@ -15,7 +15,7 @@
             p = f.object.errors.full_messages_for(:description).to_sentence
       .form-group
         = f.label :color_theme
-        = f.select :color_theme, TodoList.color_themes, {}, { class: 'form-control' }
+        = f.select :color_theme, TodoList.color_themes.map{|key,val| [val, key]}, {}, { class: 'form-control' }
       - if f.object.new_record?
         .form-group
           = f.fields_for :todo_items do |ff|

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_03_082318) do
+ActiveRecord::Schema.define(version: 2023_08_03_125743) do
 
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2023_08_03_082318) do
   create_table "todo_lists", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.integer "color_theme"
+    t.string "color_theme"
   end
 
 end

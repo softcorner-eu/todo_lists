@@ -1,7 +1,14 @@
 class TodoList < ApplicationRecord
   validates :name, presence: true
 
-  enum color_theme: [:primary, :secondary, :success, :danger, :warning, :info, :light, :dark]
+  enum color_theme: {:primary => :blue,
+                     :secondary => :grey,
+                     :success => :green,
+                     :danger => :red,
+                     :warning => :yellow,
+                     :info => :yellow,
+                     :light => :white,
+                     :dark => :black }
 
   has_many :todo_items
 
