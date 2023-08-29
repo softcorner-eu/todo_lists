@@ -40,6 +40,8 @@ gem 'slim'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form'
 gem "responders"
 gem 'jquery-rails'
+gem 'select2-rails', '~> 4.0', '>= 4.0.3'
+gem 'ransack'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

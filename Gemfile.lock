@@ -171,6 +171,11 @@ GEM
       rake (>= 0.8.7)
       thor (>= 0.19.0, < 2.0)
     rake (13.0.6)
+    ransack (2.1.1)
+      actionpack (>= 5.0)
+      activerecord (>= 5.0)
+      activesupport (>= 5.0)
+      i18n
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
@@ -200,6 +205,7 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    select2-rails (4.0.13)
     selenium-webdriver (4.9.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
@@ -259,8 +265,10 @@ DEPENDENCIES
   pry
   puma (~> 3.11)
   rails (~> 5.2.8, >= 5.2.8.1)
+  ransack
   responders
   sass-rails (~> 5.0)
+  select2-rails (~> 4.0, >= 4.0.3)
   selenium-webdriver
   simple_form!
   slim

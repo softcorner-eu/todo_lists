@@ -5,7 +5,8 @@ class TodoListsController < ApplicationController
   end
 
   def index
-    @todo_lists = TodoList.all
+    @q = TodoList.ransack(params[:q])
+    @todo_lists = @q.result(distinct: true)
   end
 
   def show
@@ -34,7 +35,7 @@ class TodoListsController < ApplicationController
 
   def todo_list_params
     params.require(:todo_list)
-          .permit(:name, :description, :color_theme,  todo_items_attributes: [:id, :content]
+          .permit(:name, :description, :color_theme, :tags,  todo_items_attributes: [:id, :content]
           )
   end
 end

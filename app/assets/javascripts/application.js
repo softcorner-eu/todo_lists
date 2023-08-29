@@ -16,4 +16,11 @@
 //= require jquery3
 //= require popper
 //= require bootstrap-sprockets
+//= require select2-full
 //= require_tree .
+
+$(document).ready(function() {
+    $('.select-form').select2({
+        allowClear: true,
+    });
+});

@@ -1,0 +1,88 @@
+
+db/migrate/20230803125743_change_type_of_color_theme.rb,111
+class ChangeTypeOfColorTheme < ActiveRecord::Migration[5.2]ChangeTypeOfColorTheme1,0
+  def changechange2,0
+
+db/migrate/20230726225711_add_description_to_todo_lists.rb,117
+class AddDescriptionToTodoLists < ActiveRecord::Migration[5.2]AddDescriptionToTodoLists1,0
+  def changechange2,0
+
+db/migrate/20230725124733_create_todo_list.rb,95
+class CreateTodoList < ActiveRecord::Migration[5.2]CreateTodoList1,0
+  def changechange2,0
+
+db/migrate/20230803082318_add_color_theme_to_todo_lists.rb,115
+class AddColorThemeToTodoLists < ActiveRecord::Migration[5.2]AddColorThemeToTodoLists1,0
+  def changechange2,0
+
+test/test_helper.rb,101
+class ActiveSupport::TestCaseTestCase5,0
+class ActiveSupport::TestCaseActiveSupport::TestCase5,0
+
+test/application_system_test_case.rb,95
+class ApplicationSystemTestCase < ActionDispatch::SystemTestCaseApplicationSystemTestCase3,0
+
+lib/application_responder.rb,82
+class ApplicationResponder < ActionController::ResponderApplicationResponder1,0
+
+config/application.rb,158
+module TodoListsTodoLists9,0
+  class Application < Rails::ApplicationApplication10,0
+  class Application < Rails::ApplicationTodoLists::Application10,0
+
+app/channels/application_cable/connection.rb,195
+module ApplicationCableApplicationCable1,0
+  class Connection < ActionCable::Connection::BaseConnection2,0
+  class Connection < ActionCable::Connection::BaseApplicationCable::Connection2,0
+
+app/channels/application_cable/channel.rb,177
+module ApplicationCableApplicationCable1,0
+  class Channel < ActionCable::Channel::BaseChannel2,0
+  class Channel < ActionCable::Channel::BaseApplicationCable::Channel2,0
+
+app/helpers/application_helper.rb,47
+module ApplicationHelperApplicationHelper1,0
+
+app/mailers/application_mailer.rb,67
+class ApplicationMailer < ActionMailer::BaseApplicationMailer1,0
+
+app/controllers/application_controller.rb,79
+class ApplicationController < ActionController::BaseApplicationController3,0
+
+app/controllers/todo_items_controller.rb,162
+class TodoItemsController < ApplicationControllerTodoItemsController1,0
+  def newnew7,0
+  def createcreate11,0
+  def todo_item_paramstodo_item_params18,0
+
+app/controllers/todo_lists_controller.rb,258
+class TodoListsController < ApplicationControllerTodoListsController1,0
+  def indexindex7,0
+  def showshow11,0
+  def newnew15,0
+  def createcreate20,0
+  def edit ; endedit26,0
+  def updateupdate28,0
+  def todo_list_paramstodo_list_params35,0
+
+app/jobs/application_job.rb,58
+class ApplicationJob < ActiveJob::BaseApplicationJob1,0
+
+app/models/application_record.rb,67
+class ApplicationRecord < ActiveRecord::BaseApplicationRecord1,0
+
+app/models/todo_list.rb,283
+class TodoList < ApplicationRecordTodoList1,0
+  has_many :todo_itemstodo_items13,0
+  has_many :todo_itemstodo_items=13,0
+  has_many :todo_itemstodo_item_ids13,0
+  has_many :todo_itemstodo_item_ids=13,0
+  def self.human_enum_name(enum_name, enum_value)human_enum_name17,0
+
+app/models/todo_item.rb,260
+class TodoItem < ApplicationRecordTodoItem1,0
+  belongs_to :todo_listtodo_list4,0
+  belongs_to :todo_listtodo_list=4,0
+  belongs_to :todo_listbuild_todo_list4,0
+  belongs_to :todo_listcreate_todo_list4,0
+  belongs_to :todo_listcreate_todo_list!4,0
