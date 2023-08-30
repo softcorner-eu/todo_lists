@@ -40,7 +40,7 @@ gem 'slim'
 gem 'simple_form', git: 'https://github.com/plataformatec/simple_form'
 gem "responders"
 gem 'jquery-rails'
-gem 'select2-rails', '~> 4.0', '>= 4.0.3'
+gem 'select2-rails'
 gem 'ransack'
 
 group :development, :test do

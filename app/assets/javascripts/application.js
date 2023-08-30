@@ -19,8 +19,10 @@
 //= require select2-full
 //= require_tree .
 
-$(document).ready(function() {
-    $('.select-form').select2({
-        allowClear: true,
+
+$(document).on('turbolinks:load', function() {
+    $('select').select2({
+    // allowClear: true,
+    theme: "bootstrap"
     });
 });
