@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :todo_lists do
-    resources :todo_items, only: [:new, :create]
+  resources :lists do
+    resources :items, only: [:new, :create]
   end
-  root "todo_lists#index"
+  root "lists#index"
 end
