@@ -26,3 +26,31 @@ $(document).on('turbolinks:load', function() {
     theme: "bootstrap"
     });
 });
+
+// $(document).on("turbolinks:load", function() {
+//     $("#add-tag").click(function(e) {
+//         e.preventDefault();
+//         const tagFields = $("#todo_list_tags_attributes").append('<div class="tag-fields"></div>');
+//     });
+//
+// });
+
+$(document).on("turbolinks:load", function () {
+    $('#add-tag').click(function(e) {
+        e.preventDefault();
+        const countTagField = $('.tag-group').length;
+        const tagFields = $("#tags_fields")
+        const formGroup = $('<div class="form-group tag-group" ></div>');
+        const tagField = $(`<input type="text" name="todo_list[tags_attributes][${countTagField}][name]" class="form-control">`);
+        const tagLabel = $(`<label for="todo_list_tags_attributes_${countTagField}_name">Tag's name number ${countTagField+1}</label>`)
+        const removeLink = $('<a href="#" class="remove-tag">Remove</a>');
+        tagFields.append(formGroup);
+        formGroup.append(tagLabel);
+        formGroup.append(tagField);
+        formGroup.append(removeLink);
+    });
+
+    $(document).on("click", ".remove-tag", function(e) {
+        e.preventDefault();
+    });
+});

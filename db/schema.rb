@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_08_29_092228) do
+ActiveRecord::Schema.define(version: 2023_08_31_120941) do
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+  end
+
+  create_table "tags_todo_lists", id: false, force: :cascade do |t|
+    t.integer "todo_list_id", null: false
+    t.integer "tag_id", null: false
+  end
 
   create_table "todo_items", force: :cascade do |t|
     t.string "content"
@@ -22,7 +31,6 @@ ActiveRecord::Schema.define(version: 2023_08_29_092228) do
     t.string "name"
     t.string "description"
     t.string "color_theme"
-    t.integer "tags"
   end
 
 end

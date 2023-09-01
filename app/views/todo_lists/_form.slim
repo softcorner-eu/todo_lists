@@ -13,9 +13,19 @@
         - if f.object.errors.key? :description
           .invalid-feedback
             p = f.object.errors.full_messages_for(:description).to_sentence
-      .form-group
-        = f.label :tags
-        = f.select :tags, TodoList.tags, {}, { class: 'form-control' }
+      #tags_fields
+        - @todo_list.tags.each_with_index do |tag, index|
+          .form-group
+            = fields_for :tags, tag, index: index do |ff|
+              = ff.label :name
+              = ff.text_field :name, class: 'form-control'
+              = ff.hidden_field :id, multiple: true
+              - if tag.id
+                = link_to "Remove", tag_path(id: tag.id), method: :delete, class: "btn btn-danger", remote: true
+              - else
+                = link_to "Remove", '#', class: "remove-tag"
+
+        = link_to "Add Tag", "#", id: "add-tag"
       .form-group
         = f.label :color_theme
         = f.select :color_theme, TodoList.color_themes.map{|key,val| [val, key]}, {}, { class: 'form-control' }
