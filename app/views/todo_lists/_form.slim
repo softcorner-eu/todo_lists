@@ -15,11 +15,11 @@
             p = f.object.errors.full_messages_for(:description).to_sentence
       #tags_fields
         - @todo_list.tags.each_with_index do |tag, index|
-          .form-group
-            = fields_for :tags, tag, index: index do |ff|
+          .form-group.tag-group class="tag-#{tag&.id}"
+            = fields_for "todo_list[tags_attributes][]", tag, index: index do |ff|
               = ff.label :name
               = ff.text_field :name, class: 'form-control'
-              = ff.hidden_field :id, multiple: true
+              = ff.hidden_field :id
               - if tag.id
                 = link_to "Remove", tag_path(id: tag.id), method: :delete, class: "btn btn-danger", remote: true
               - else

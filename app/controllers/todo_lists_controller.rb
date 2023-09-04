@@ -6,6 +6,7 @@ class TodoListsController < ApplicationController
 
   def index
     @q = TodoList.ransack(params[:q])
+    @tag_names = Tag.distinct.pluck(:name)
     @todo_lists = @q.result(distinct: true)
   end
 
@@ -20,10 +21,9 @@ class TodoListsController < ApplicationController
   end
 
   def create
-    binding.pry
     @todo_list = TodoList.create todo_list_params
-    @todo_item = @todo_list.todo_items.build
-    @tags = @todo_list.tags.build
+    @todo_list.todo_items.build
+    @todo_list.tags.build
     respond_with @todo_list
   end
 
@@ -38,7 +38,7 @@ class TodoListsController < ApplicationController
 
   def todo_list_params
     params.require(:todo_list)
-          .permit(:name, :description, :color_theme, tags: [:name], todo_items_attributes: [:id, :content]
+          .permit(:name, :description, :color_theme, tags_attributes: [:id, :name], todo_items_attributes: [:id, :content]
           )
   end
 end

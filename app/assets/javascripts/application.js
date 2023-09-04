@@ -22,7 +22,7 @@
 
 $(document).on('turbolinks:load', function() {
     $('select').select2({
-    // allowClear: true,
+    allowClear: true,
     theme: "bootstrap"
     });
 });
@@ -52,5 +52,6 @@ $(document).on("turbolinks:load", function () {
 
     $(document).on("click", ".remove-tag", function(e) {
         e.preventDefault();
+        $(this).parent().remove();
     });
 });
