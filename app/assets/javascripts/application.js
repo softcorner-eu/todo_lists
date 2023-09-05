@@ -29,16 +29,16 @@ $(document).on('turbolinks:load', function() {
 
 $(document).on("click", "[data-action='add-tag']", function(e) {
     e.preventDefault();
-    const tagFields = $("[data-div='tag-fields']");
-    const tagField = $("[data-div='tag-group']");
-    const destTagField = tagField.first().clone();
-    destTagField.find("[type='text']").val('');
-    destTagField.find("[type='text']").attr('name', `todo_list[tags_attributes][${tagField.length}][name]`);
-    destTagField.find("[type='text']").attr('id', `todo_list_tags_attributes_${tagField.length}_name`);
-    destTagField.find("[type='hidden']").val('');
-    destTagField.find("[type='hidden']").attr('id', `todo_list_tags_attributes_${tagField.length}_id`);
-    destTagField.find("[type='hidden']").attr('name', `todo_list[tags_attributes][${tagField.length}][id]`);
-    tagFields.append(destTagField);
+    const $this = $(this)
+    const $tagFields = $this.parent()
+    const $tagField = $this.nextAll('.form-group')
+    const destTagField = $tagField.first().clone();
+    destTagField.find('input').each(function(index, elt){
+        ['name', 'id'].forEach(function(attr) {
+            $(elt).attr(attr, $(elt).attr(attr).replace(/\[\d+\]/, $tagField.length)).val('');
+        });
+    });
+    $tagFields.append(destTagField);
 });
 
 $(document).on("click", "[data-action='remove-tag']", function(e) {

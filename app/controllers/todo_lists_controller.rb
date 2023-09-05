@@ -5,7 +5,6 @@ class TodoListsController < ApplicationController
   end
 
   def index
-    @tag_names = Tag.distinct.pluck(:name)
     if params[:tag_name].present?
       @todo_lists = TodoList.joins(:tags).where(tags: {name: params[:tag_name]})
     else

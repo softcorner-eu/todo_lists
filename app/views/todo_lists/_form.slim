@@ -13,7 +13,7 @@
         - if f.object.errors.key? :description
           .invalid-feedback
             p = f.object.errors.full_messages_for(:description).to_sentence
-      div data-div="tag-fields"
+      .tag-fields
         = link_to "Add Tag", "#", {'data-action': "add-tag"}
         .form-group.form-row data-div="tag-group"
           = f.fields_for :tags do |ff|
@@ -27,7 +27,7 @@
                     = ff.check_box '_destroy'
                     => "Supprimer"
               - else
-                = link_to "Supprimer", '#', {class: 'btn btn-secondary', 'data-action': "remove-tag"}
+                = link_to "Supprimer", '#', {class: 'btn btn-secondary btn-block', 'data-action': "remove-tag"}
 
 
       .form-group

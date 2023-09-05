@@ -3,7 +3,12 @@
   a.navbar-brand
     button.navbar-toggler data-toggle="collapse" data-target="#navbar-content"
       span.navbar-toggler-icon
-  #navbar-content.navbar-collapse.collapse
+  #navbar-content.navbar-collapse.collapse.justify-content-between
     ul.navbar-nav
       li.nav-item
         = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'nav-link'
+    - if @todo_lists
+      = form_tag todo_lists_path, method: :get, class: "form-inline" do
+        = select_tag 'tag_name', options_for_select(@tag_names = Tag.distinct.pluck(:name)),
+                {class: 'form-control'}
+        = submit_tag 'Filtrer', class: 'btn btn-outline-success ml-2'
