@@ -1,5 +1,8 @@
 .row
   .col-lg-12
+    = form_tag todo_lists_path, method: :get, class: "form-inline" do
+      = select_tag 'tag_name', options_for_select(@tag_names, {:include_blank => 'name of your blank prompt'})
+      = submit_tag 'Filtrer', class: 'btn btn-primary'
     #todo_list_wrapper
       .row
         - @todo_lists.each do |todo_list_card|
