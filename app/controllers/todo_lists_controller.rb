@@ -20,20 +20,11 @@ class TodoListsController < ApplicationController
   def new
     @todo_list = TodoList.new
     @todo_list.todo_items.build
-    @todo_list.tags.build
   end
 
   def create
     @todo_list = TodoList.create todo_list_params
     @todo_list.todo_items.build
-
-    binding.pry
-    if @todo_list.save
-      params[:todo_list][:tags_attributes][:name].each do |tag_name|
-        tag = Tag.find_or_create_by tag_name
-        @todo_list << tag
-      end
-    end
     respond_with @todo_list
   end
 
@@ -48,7 +39,7 @@ class TodoListsController < ApplicationController
 
   def todo_list_params
     params.require(:todo_list)
-          .permit(:name, :description, :color_theme, todo_items_attributes: [:id, :content]
+          .permit(:name, :description, :color_theme, todo_items_attributes: [:id, :content], tag_names: []
           )
   end
 end

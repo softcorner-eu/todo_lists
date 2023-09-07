@@ -16,6 +16,18 @@ class TodoList < ApplicationRecord
   accepts_nested_attributes_for :todo_items, reject_if: :all_blank
   accepts_nested_attributes_for :tags, reject_if: :all_blank, :allow_destroy => true
 
+  def tag_names
+    tags.pluck(:name)
+  end
+
+  def tag_names=(tag_names_array)
+    tag_names_array.each do |tag_name|
+      tag = Tag.find_or_create_by(name: tag_name)
+      tags << tag
+    end
+  end
+
+
   def self.human_enum_name(enum_name, enum_value)
     I18n.t("activerecord.attributes.#{model_name.i18n_key}.#{enum_name.to_s.pluralize}.#{enum_value}")
   end
