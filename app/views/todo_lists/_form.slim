@@ -18,7 +18,7 @@
         .form-group.form-row data-div="tag-group"
           = f.fields_for :tags do |ff|
             .col-lg-9
-              = ff.text_field :name, class: 'form-control'
+              = ff.select :name, Tag.distinct.pluck(:name), {}, { class: 'form-control', multiple: true}
               = ff.hidden_field :id
             .col-lg-3
               - if ff.object.id

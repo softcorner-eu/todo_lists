@@ -23,7 +23,8 @@
 $(document).on('turbolinks:load', function() {
     $('select').select2({
     allowClear: true,
-    theme: "bootstrap"
+    theme: "bootstrap",
+    tags: true
     });
 });
 
@@ -43,5 +44,5 @@ $(document).on("click", "[data-action='add-tag']", function(e) {
 
 $(document).on("click", "[data-action='remove-tag']", function(e) {
     e.preventDefault();
-    $(this).parents("[data-div='tag-group']").remove();
+    $(this).closest("[data-div='tag-group']").remove();
 });
