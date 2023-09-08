@@ -92,8 +92,6 @@ GEM
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    formtastic (4.0.0)
-      actionpack (>= 5.2.0)
     globalid (1.1.0)
       activesupport (>= 5.0)
     i18n (1.14.1)
@@ -268,7 +266,6 @@ DEPENDENCIES
   capybara (>= 2.15)
   chromedriver-helper
   coffee-rails (~> 4.2)
-  formtastic
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
