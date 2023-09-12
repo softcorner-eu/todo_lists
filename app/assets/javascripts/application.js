@@ -21,8 +21,8 @@
 
 
 $(document).on('turbolinks:load', function() {
-    $('select').select2({
-    // allowClear: true,
+   $('select').select2({
+    allowClear: true,
     theme: "bootstrap"
     });
 });

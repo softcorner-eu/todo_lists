@@ -1,16 +1,16 @@
 .row
   .col-lg-6.col-sm-4
-    h1 = @todo_list.name
+    h1 = @list.name
   .col-lg-6.text-right
-    = link_to "Modifier la liste", edit_todo_list_path, class: 'btn btn-secondary mt-2'
+    = link_to "Modifier la liste", edit_list_path, class: 'btn btn-secondary mt-2'
 .row
   .col-sm
-    p = @todo_list.description
+    p = @list.description
     ul.list-group
-      - @todo_list.todo_items.each do |item|
+      - @list.items.each do |item|
         - if item.content
           li.list-group-item = item.content
-    = form_for [@todo_list, @todo_item] do |f|
+    = form_for [@list, @item] do |f|
       .input-group
         = f.text_field :content, class: 'form-control', 'aria-label': "Recipient's username", 'aria-describedby': "btn-1"
         .input-group-append

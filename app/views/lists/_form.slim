@@ -1,6 +1,6 @@
 .row
   .col-lg-6
-    = form_for todo_list do |f|
+    = form_for list do |f|
       .form-group
         = f.label :name
         = f.text_field :name, class: "form-control #{f.object.errors.key?(:name) ? 'is-invalid' : ''}"
@@ -13,6 +13,7 @@
         - if f.object.errors.key? :description
           .invalid-feedback
             p = f.object.errors.full_messages_for(:description).to_sentence
+<<<<<<< HEAD:app/views/todo_lists/_form.slim
       #tags_fields
         - @todo_list.tags.each_with_index do |tag, index|
           .form-group
@@ -26,12 +27,17 @@
                 = link_to "Remove", '#', class: "remove-tag"
 
         = link_to "Add Tag", "#", id: "add-tag"
+=======
+      .form-group
+        = f.label :tags
+        = f.select :tags, List.tags.map(&:first), {}, { class: 'form-control' }
+>>>>>>> 36872a67cdf1faba47419e9a1e32ada85765895a:app/views/lists/_form.slim
       .form-group
         = f.label :color_theme
-        = f.select :color_theme, TodoList.color_themes.map{|key,val| [val, key]}, {}, { class: 'form-control' }
+        = f.select :color_theme, List.color_themes.map{|key,val| [val, key]}, {}, { class: 'form-control' }
       - if f.object.new_record?
         .form-group
-          = f.fields_for :todo_items do |ff|
+          = f.fields_for :items do |ff|
             = ff.hidden_field :id
             = ff.label :content
             = ff.text_field :content,  class: 'form-control'
