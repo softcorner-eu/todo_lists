@@ -1,14 +1,12 @@
 .row
   .col-lg-6
-    = simple_form_for @todo_list do |f|
-      = f.input :name, html: {class: "form-control #{f.object.errors.key?(:description) ? 'is-invalid' : ''}"}
-      = f.input :description,  html: {class: "form-control #{f.object.errors.key?(:description) ? 'is-invalid' : ''}"}
-      = f.input :tag_names, as: :select, collection: Tag.distinct.pluck(:name),
-              input_html: { class: 'form-control', multiple: true}
-      = f.input :color_theme, as: :select, collection: TodoList.color_themes.map{|key,val| [val, key]},
-              input_html: { class: 'form-control' }
+    = simple_form_for @todo_list, wrapper: :horizontal_form do |f|
+      = f.input :name
+      = f.input :description
+      = f.input :tag_names, as: :select, wrapper: :horizontal_multi_select, collection: Tag.distinct.pluck(:name), input_html: {multiple: true}
+      = f.input :color_theme, as: :select, wrapper: :horizontal_select, collection: TodoList.color_themes.map{|key,val| [val, key]}
       - if f.object.new_record?
-        = f.fields_for :todo_items do |ff|
+        = f.fields_for :todo_items, wrapper: :horizontal_form do |ff|
           = ff.hidden_field :id
-          = ff.input :content,  html: {class: 'form-control'}
-      = f.button :submit, input_html: { class: 'btn btn-primary'}
+          = ff.input :content
+      = f.button :submit
