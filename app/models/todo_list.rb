@@ -14,16 +14,18 @@ class TodoList < ApplicationRecord
   has_and_belongs_to_many :tags
 
   accepts_nested_attributes_for :todo_items, reject_if: :all_blank
-  accepts_nested_attributes_for :tags, reject_if: :all_blank, :allow_destroy => true
+  accepts_nested_attributes_for :tags, reject_if: :all_blank
 
   def tag_names
     tags.pluck(:name)
   end
 
   def tag_names=(tag_names_array)
+    tags.each do |tag|
+      tag.destroy unless tag.name.in?(tag_names_array)
+    end
     tag_names_array.each do |tag_name|
-      tag = Tag.find_or_create_by(name: tag_name)
-      tags.build tag
+      tags.build(name: tag_name) unless tags.find {|t| t.name == tag_name }
     end
   end
 
