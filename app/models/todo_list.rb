@@ -12,6 +12,7 @@ class TodoList < ApplicationRecord
 
   has_many :todo_items, dependent: :destroy
   has_and_belongs_to_many :tags
+  has_and_belongs_to_many :users
 
   accepts_nested_attributes_for :todo_items, reject_if: :all_blank
   accepts_nested_attributes_for :tags, reject_if: :all_blank, allow_destroy: true

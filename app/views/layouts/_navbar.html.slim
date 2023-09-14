@@ -7,8 +7,16 @@
     ul.navbar-nav
       li.nav-item
         = link_to "Créer une nouvelle liste", new_todo_list_path, class: 'nav-link'
+      - if !user_signed_in?
+        li.nav-item
+          = link_to "Se connecter", new_user_session_path, class: 'nav-link'
+        li.nav-item
+          = link_to "S'enregistrer", new_user_registration_path, class: 'nav-link'
+      - else
+        li.nav-item
+          = link_to "Déconnexion", destroy_user_session_path, class: 'nav-link', method: :delete
     - if @todo_lists
-      = form_tag todo_lists_path, method: :get, class: "form-inline" do
+      = form_tag todo_lists_path, method: :get, class: "w-25 d-flex align-items-center" do
         = select_tag 'tag_name', options_for_select(Tag.distinct.pluck(:name)),
                 {class: 'form-control'}
         = submit_tag 'Filtrer', class: 'btn btn-outline-success ml-2'
