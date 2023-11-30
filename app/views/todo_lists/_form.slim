@@ -1,28 +1,12 @@
 .row
   .col-lg-6
-    = form_for todo_list do |f|
-      .form-group
-        = f.label :name
-        = f.text_field :name, class: "form-control #{f.object.errors.key?(:name) ? 'is-invalid' : ''}"
-        - if f.object.errors.key? :name
-          .invalid-feedback
-            p = f.object.errors.full_messages_for(:name).to_sentence
-      .form-group
-        = f.label :description
-        = f.text_field :description,  class: "form-control #{f.object.errors.key?(:description) ? 'is-invalid' : ''}"
-        - if f.object.errors.key? :description
-          .invalid-feedback
-            p = f.object.errors.full_messages_for(:description).to_sentence
-      .tag-fields
-        = f.label :tag_names
-        = f.select :tag_names, Tag.distinct.pluck(:name), {}, { class: 'form-control', multiple: true}
-      .form-group
-        = f.label :color_theme
-        = f.select :color_theme, TodoList.color_themes.map{|key,val| [val, key]}, {}, { class: 'form-control' }
+    = simple_form_for @todo_list, wrapper: :horizontal_form do |f|
+      = f.input :name
+      = f.input :description
+      = f.input :tag_names, as: :select, wrapper: :horizontal_multi_select, collection: Tag.distinct.pluck(:name), input_html: {multiple: true}
+      = f.input :color_theme, as: :select, wrapper: :horizontal_select, collection: TodoList.color_themes.map{|key,val| [val, key]}
       - if f.object.new_record?
-        .form-group
-          = f.fields_for :todo_items do |ff|
-            = ff.hidden_field :id
-            = ff.label :content
-            = ff.text_field :content,  class: 'form-control'
-      = f.submit class: 'btn btn-primary'
+        = f.fields_for :todo_items, wrapper: :horizontal_form do |ff|
+          = ff.hidden_field :id
+          = ff.input :content
+      = f.button :submit
